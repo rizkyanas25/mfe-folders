@@ -2,7 +2,8 @@ import CircularProgress from '@/components/CircularProgress';
 import ConfigProvider, { ConfigProviderData } from '@/providers/ConfigProvider';
 import ModalProvider from '@/providers/ModalProviders/ModalProviders';
 
-import LOPDetailPageControl, { useLOPDetailPageControl } from './LOPDetailPageControl';
+import { useLOPDetailPageControl } from './LOPDetailPageControl';
+import LOPDetailPageControl from './LOPDetailPageControl';
 import LOPDetailPageView from './LOPDetailPageView';
 
 type LOPDetailPageContainerProps = {
@@ -18,6 +19,8 @@ function ContentWrapper() {
   if (!isReady) {
     return <CircularProgress />;
   }
+
+  // return <p>TEST NJING</p>;
 
   return <LOPDetailPageView merchantApplicationLOP={validMerchantApplicationLOP} />;
 }
